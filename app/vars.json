@@ -1,0 +1,8 @@
+{
+  "inputs": [{
+    "name": "Darth Vader",
+    "email": "darth-vader@gmail.com",
+    "enterprise": "Foo",
+    "job_position": "bar"
+  }]
+}
