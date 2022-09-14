@@ -14,14 +14,14 @@ class ReplicaRegion(BaseModel):
 
 class Secret(BaseModel):
     name: str
-    client_request_token: Optional[str]
-    description: Optional[str]
-    kms_key_id: Optional[str]
-    secret_binary: Optional[str]
+    client_request_token: Optional[str | None]
+    description: Optional[str | None]
+    kms_key_id: Optional[str | None]
+    secret_binary: Optional[str | None]
     secret_string: str
-    force_overwrite_replica_secret: Optional[bool]
-    tags: Optional[List[Tag]]
-    replica_regions: Optional[List[ReplicaRegion]]
+    force_overwrite_replica_secret: Optional[bool | None]
+    tags: Optional[List[Tag] | None]
+    replica_regions: Optional[List[ReplicaRegion] | None]
 
     class Config:
         schema_extra = {
