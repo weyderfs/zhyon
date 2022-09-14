@@ -1,6 +1,9 @@
-from fastapi import FastAPI, Form
+from fastapi import Depends, FastAPI, Form
+from fastapi.security import OAuth2PasswordBearer
 
 app = FastAPI()
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 class Main():
    
