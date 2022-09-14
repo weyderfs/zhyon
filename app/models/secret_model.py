@@ -23,6 +23,7 @@ class Secret(BaseModel):
   tags: Optional[List[Tag]]
   replica_regions: Optional[List[ReplicaRegion]]
 
+  
   class Config:
     schema_extra = {
       "example": {

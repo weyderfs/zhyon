@@ -1,5 +1,8 @@
-from fastapi import Depends, FastAPI, Form
-from app.secret import Secret
+from base64 import encode
+from codecs import utf_8_encode
+from fastapi import FastAPI
+from app.models.secret_model import Secret
+from app.services.secret_service import create_secret
 # from fastapi.security import OAuth2PasswordBearer
 
 app = FastAPI()
@@ -16,4 +19,4 @@ async def read_root():
 
 @app.post("/create-secret")
 async def create_secret(secret: Secret):
-   return secret.json()
+   create_secret(secret)
