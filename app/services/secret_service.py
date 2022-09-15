@@ -18,3 +18,12 @@ def create_secret_service(secret: Secret):
       SecretString=secret.secret_string
     )
     return response
+
+def update_secret_service(secret: Secret):
+    logger.info("logging from the create secret service")
+    response = client.put_secret_value(
+      Name=secret.name,
+      Description=secret.description,
+      SecretString=secret.secret_string
+    )
+    return response

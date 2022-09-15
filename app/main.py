@@ -2,7 +2,7 @@ from base64 import encode
 from codecs import utf_8_encode
 from fastapi import FastAPI
 from app.models.secret_model import Secret
-from app.services.secret_service import create_secret_service
+from app.services.secret_service import create_secret_service, update_secret_service
 from logging.config import dictConfig
 import logging
 from app.logconfig import LogConfig
@@ -30,4 +30,10 @@ async def read_root():
 async def create_secret(secret: Secret):
     logger.info("logging from the create secret")
     response = create_secret_service(secret)
+    return response
+
+@app.post("/update-secret")
+async def update_secret_value(secret: Secret):
+    logger.info("logging from the create secret")
+    response = update_secret_service(secret)
     return response
