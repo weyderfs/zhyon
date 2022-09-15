@@ -10,19 +10,11 @@ logger = logging.getLogger("mycoolapp")
 
 client = boto3.client('secretsmanager')
 
-
 def create_secret_service(secret: Secret):
     logger.info("logging from the create secret service")
     response = client.create_secret(
-        Name=secret.name,
-        ClientRequestToken=secret.client_request_token,
-        Description=secret.description,
-        KmsKeyId=secret.kms_key_id,
-        SecretBinary=secret.secret_binary,
-        SecretString=secret.secret_string,
-        ForceOverwriteReplicaSecret=secret.force_overwrite_replica_secret,
-        Tags=secret.tags,
-        AddReplicaRegions=secret.replica_regions
+      Name='secret.name',
+      Description='secret.description',
+      SecretString='secret.secret_string'
     )
-    return {"arn": response.arn, "name": response.name}
-
+    return response
