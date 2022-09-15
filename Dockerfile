@@ -1,5 +1,7 @@
 FROM python:3.10-slim-bullseye
 
+ENV AWS_DEFAULT_REGION="us-west-2"
+
 WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
