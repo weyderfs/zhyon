@@ -146,6 +146,7 @@ dmypy.json
 .DS_Store
 .AppleDouble
 .LSOverride
+.zip
 
 # Icon must end with two \r
 Icon
