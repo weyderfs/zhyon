@@ -1,6 +1,9 @@
 # Zhyon (Working Progress)
 Building and Orchestrating Automation Tool
 
+![zhyonlogo](/assets/logo.png)
+
+
 ## Aspiration
 
 Nowadays toil turn on a consequence of the "Boom" of Cloud technologies
