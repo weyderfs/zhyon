@@ -168,10 +168,3 @@ yarn-error.log*
 
 # Test coverage
 /coverage
-
-# Arquivos de configuração do editor
-/.vscode/
-/.idea/
-*.sublime-project
-*.sublime
-
